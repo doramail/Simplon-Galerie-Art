@@ -37,15 +37,6 @@ public partial class @My_First_Person_Player_Controls : IInputActionCollection2,
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""Look"",
-                    ""type"": ""Value"",
-                    ""id"": ""cc821508-bd76-4f74-a9c6-0a4cd365d4e4"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
-                {
                     ""name"": ""Fire"",
                     ""type"": ""Button"",
                     ""id"": ""c6ebdf47-6d0b-4166-8bb1-e239c219a1d0"",
@@ -62,20 +53,27 @@ public partial class @My_First_Person_Player_Controls : IInputActionCollection2,
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Camera_Zoom"",
+                    ""type"": ""Button"",
+                    ""id"": ""1820b164-45f5-43c6-9a9e-2de0e6b578d5"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MouseZoomScrollY"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""8ebbed2c-4fe3-4336-b7e0-2a1bb08445f8"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""978bfe49-cc26-4a3d-ab7b-7d7a29327403"",
-                    ""path"": ""<Gamepad>/leftStick"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Gamepad"",
-                    ""action"": ""Player_Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
                 {
                     ""name"": ""WASD"",
                     ""id"": ""00ca640b-d935-4593-8157-c05846ea39b3"",
@@ -177,110 +175,11 @@ public partial class @My_First_Person_Player_Controls : IInputActionCollection2,
                 },
                 {
                     ""name"": """",
-                    ""id"": ""1635d3fe-58b6-4ba9-a4e2-f4b964f6b5c8"",
-                    ""path"": ""<XRController>/{Primary2DAxis}"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""XR"",
-                    ""action"": ""Player_Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""3ea4d645-4504-4529-b061-ab81934c3752"",
-                    ""path"": ""<Joystick>/stick"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Joystick"",
-                    ""action"": ""Player_Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""c1f7a91b-d0fd-4a62-997e-7fb9b69bf235"",
-                    ""path"": ""<Gamepad>/rightStick"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Gamepad"",
-                    ""action"": ""Look"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""8c8e490b-c610-4785-884f-f04217b23ca4"",
-                    ""path"": ""<Pointer>/delta"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse;Touch"",
-                    ""action"": ""Look"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""3e5f5442-8668-4b27-a940-df99bad7e831"",
-                    ""path"": ""<Joystick>/{Hatswitch}"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Joystick"",
-                    ""action"": ""Look"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""143bb1cd-cc10-4eca-a2f0-a3664166fe91"",
-                    ""path"": ""<Gamepad>/rightTrigger"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Gamepad"",
-                    ""action"": ""Fire"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""05f6913d-c316-48b2-a6bb-e225f14c7960"",
                     ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""Fire"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""886e731e-7071-4ae4-95c0-e61739dad6fd"",
-                    ""path"": ""<Touchscreen>/primaryTouch/tap"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Touch"",
-                    ""action"": ""Fire"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""ee3d0cd2-254e-47a7-a8cb-bc94d9658c54"",
-                    ""path"": ""<Joystick>/trigger"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Joystick"",
-                    ""action"": ""Fire"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""8255d333-5683-4943-a58a-ccb207ff1dce"",
-                    ""path"": ""<XRController>/{PrimaryAction}"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""XR"",
                     ""action"": ""Fire"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -293,6 +192,17 @@ public partial class @My_First_Person_Player_Controls : IInputActionCollection2,
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""Camera_Look"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b3d8c367-0c89-44f6-9107-a0e86685b7a2"",
+                    ""path"": ""<Mouse>/scroll/y"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MouseZoomScrollY"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -881,9 +791,10 @@ public partial class @My_First_Person_Player_Controls : IInputActionCollection2,
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Player_Movement = m_Player.FindAction("Player_Movement", throwIfNotFound: true);
-        m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
         m_Player_Fire = m_Player.FindAction("Fire", throwIfNotFound: true);
         m_Player_Camera_Look = m_Player.FindAction("Camera_Look", throwIfNotFound: true);
+        m_Player_Camera_Zoom = m_Player.FindAction("Camera_Zoom", throwIfNotFound: true);
+        m_Player_MouseZoomScrollY = m_Player.FindAction("MouseZoomScrollY", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -956,17 +867,19 @@ public partial class @My_First_Person_Player_Controls : IInputActionCollection2,
     private readonly InputActionMap m_Player;
     private IPlayerActions m_PlayerActionsCallbackInterface;
     private readonly InputAction m_Player_Player_Movement;
-    private readonly InputAction m_Player_Look;
     private readonly InputAction m_Player_Fire;
     private readonly InputAction m_Player_Camera_Look;
+    private readonly InputAction m_Player_Camera_Zoom;
+    private readonly InputAction m_Player_MouseZoomScrollY;
     public struct PlayerActions
     {
         private @My_First_Person_Player_Controls m_Wrapper;
         public PlayerActions(@My_First_Person_Player_Controls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Player_Movement => m_Wrapper.m_Player_Player_Movement;
-        public InputAction @Look => m_Wrapper.m_Player_Look;
         public InputAction @Fire => m_Wrapper.m_Player_Fire;
         public InputAction @Camera_Look => m_Wrapper.m_Player_Camera_Look;
+        public InputAction @Camera_Zoom => m_Wrapper.m_Player_Camera_Zoom;
+        public InputAction @MouseZoomScrollY => m_Wrapper.m_Player_MouseZoomScrollY;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -979,15 +892,18 @@ public partial class @My_First_Person_Player_Controls : IInputActionCollection2,
                 @Player_Movement.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPlayer_Movement;
                 @Player_Movement.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPlayer_Movement;
                 @Player_Movement.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPlayer_Movement;
-                @Look.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLook;
-                @Look.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLook;
-                @Look.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLook;
                 @Fire.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire;
                 @Fire.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire;
                 @Fire.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire;
                 @Camera_Look.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCamera_Look;
                 @Camera_Look.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCamera_Look;
                 @Camera_Look.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCamera_Look;
+                @Camera_Zoom.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCamera_Zoom;
+                @Camera_Zoom.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCamera_Zoom;
+                @Camera_Zoom.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCamera_Zoom;
+                @MouseZoomScrollY.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseZoomScrollY;
+                @MouseZoomScrollY.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseZoomScrollY;
+                @MouseZoomScrollY.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseZoomScrollY;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -995,15 +911,18 @@ public partial class @My_First_Person_Player_Controls : IInputActionCollection2,
                 @Player_Movement.started += instance.OnPlayer_Movement;
                 @Player_Movement.performed += instance.OnPlayer_Movement;
                 @Player_Movement.canceled += instance.OnPlayer_Movement;
-                @Look.started += instance.OnLook;
-                @Look.performed += instance.OnLook;
-                @Look.canceled += instance.OnLook;
                 @Fire.started += instance.OnFire;
                 @Fire.performed += instance.OnFire;
                 @Fire.canceled += instance.OnFire;
                 @Camera_Look.started += instance.OnCamera_Look;
                 @Camera_Look.performed += instance.OnCamera_Look;
                 @Camera_Look.canceled += instance.OnCamera_Look;
+                @Camera_Zoom.started += instance.OnCamera_Zoom;
+                @Camera_Zoom.performed += instance.OnCamera_Zoom;
+                @Camera_Zoom.canceled += instance.OnCamera_Zoom;
+                @MouseZoomScrollY.started += instance.OnMouseZoomScrollY;
+                @MouseZoomScrollY.performed += instance.OnMouseZoomScrollY;
+                @MouseZoomScrollY.canceled += instance.OnMouseZoomScrollY;
             }
         }
     }
@@ -1161,9 +1080,10 @@ public partial class @My_First_Person_Player_Controls : IInputActionCollection2,
     public interface IPlayerActions
     {
         void OnPlayer_Movement(InputAction.CallbackContext context);
-        void OnLook(InputAction.CallbackContext context);
         void OnFire(InputAction.CallbackContext context);
         void OnCamera_Look(InputAction.CallbackContext context);
+        void OnCamera_Zoom(InputAction.CallbackContext context);
+        void OnMouseZoomScrollY(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

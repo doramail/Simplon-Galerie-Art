@@ -1,17 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem; 
 
 public class MouseLook : MonoBehaviour
 {
+    public float ZoomCameraInput { get; private set; } = 0.0f;
     private float mouseSensitivity = 20.0f;
-    private Vector2 mouseLook;
+    private float mouseZoomSensitivity = 10f;
+    private Vector2 mouseLook, mouseZoomLook;
     private Transform playerBody;
     private My_First_Person_Player_Controls controls; /* The use of this My_First_Person_Player_Controls() 
                                                          allows to access the Player_Controller only by using script
                                                          there is no need to set the Player Input component */
     private float xRotation = 0.0f;
+
 
     private void Awake()
     {
@@ -43,16 +44,33 @@ public class MouseLook : MonoBehaviour
         playerBody.Rotate(Vector2.up * mouseX);
     }
 
+    private void Zoom() // WIP
+    {
+        mouseZoomLook = controls.Player.Camera_Look.ReadValue<Vector2>();
+        float zoomFactor = mouseZoomLook.sqrMagnitude * mouseZoomSensitivity * Time.deltaTime;
+        //transform.localPosition = Vector2.zero;
+        
+        // Debug.Log("mouseZoomLook = " + mouseZoomLook);
+        // Debug.Log("zoomFactor = " + zoomFactor);
+    }
+
+    private void SetZoomCamera(InputAction.CallbackContext context)
+    {
+        ZoomCameraInput = context.ReadValue<float>();
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        // Vector2 mouseCursorPosition= Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        // transform.position = mouseCursorPosition;
         Look();
+        Zoom();
     }
 }
